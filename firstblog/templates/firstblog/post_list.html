@@ -1,0 +1,22 @@
+{% load staticfiles %}
+<html>
+	<head>
+		<title>MY_BLOG_HTML</title>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="{% static 'css/firstblog.css' %}">
+	</head>
+	<body>
+		<div>
+			<h1><a href="/">Library List</a></h1>
+		</div>
+		<ul>
+			{% for library in librarys %}
+			<li> <a href="{% url 'librarydetails' pk=library.pk %}">{{ library.libraryName }}</a></li>			
+			{% endfor %}
+		</ul>
+		<div >
+            <h4><a href="/new/">CLICK HERE TO ADD A NEW BOOK TO LIBRARY</a></h4>
+        </div>
+	</body>
+</html>
