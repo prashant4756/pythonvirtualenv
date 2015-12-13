@@ -1,0 +1,2 @@
+# pythonvirtualenv
+Django Library project
